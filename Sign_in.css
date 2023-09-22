@@ -1,0 +1,468 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+
+/* Scroll 'Y' */
+
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(161, 172, 159); 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(35, 207, 93); 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(21, 121, 54); 
+    }
+
+
+/* Root */
+
+    :root {
+        --MainColor-color: rgb(35, 207, 93);
+        --BackgroundColor-color: rgb(255, 244, 230);
+        --HeaderColor-color: rgb(255, 237, 212);
+        --MenuBackgroundColor-color: rgba(233, 222, 207, 0.925);
+        --GrayColor-color: rgb(145, 145, 145);
+        --WhiteColor-color: rgb(255, 255, 255);
+        --HoverScale-Scale: scale(1.1);
+    }
+
+/* "*" */
+
+    * {
+        box-sizing: border-box;
+        font-family: Inter;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: var(--BackgroundColor-color);
+        height: 100vh;
+    }
+
+/* Sign in Window */
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 10px 15px 20px rgba(109, 108, 106, 0.4);
+        background-color: var(--MenuBackgroundColor-color);
+        border-radius: 10px;
+        padding: 1em;
+        width: 35rem;
+        height: 45rem;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 1;
+    }
+
+    .wrapper-2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+/* Header */
+
+    .logo-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo_text a {
+        text-decoration: none;
+        font-size: 30px;
+        font-family: Petit Formal Script;
+        color: var(--MainColor-color);
+        transition: all 0.3s ease 0s;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+/* Logo text hover */
+
+    .logo_text a:hover {
+        color: var(--WhiteColor-color);
+        text-shadow: 1px 1px 5px #969696;
+    }
+
+/* H2, H4 */
+
+    h2, h4 {
+        margin: 0;
+        cursor: default;
+    }
+
+    h2 {
+        color: rgb(51, 50, 49);
+        font-size: 40px;
+        width: 65%;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    h4 {
+        margin-bottom: 30px;
+        color: rgb(131, 130, 127);
+        letter-spacing: 3px;
+    }
+
+/* Inputs */
+
+    .input {
+        margin: 0px 0px;
+        width: 90%;
+        height: 3rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        background-color: rgb(255, 255, 255);
+        padding: 15px 10px;
+    }
+
+    #username-input {
+        display: none;
+    }
+
+    .lable {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa-solid {
+        position: absolute;
+        margin-left: 425px;
+        color: var(--GrayColor-color);
+        cursor: pointer;
+        padding: 16px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+
+    input:focus {
+        outline: none;
+        box-shadow: 4px 7px 10px rgba(129, 127, 123, 0.2);
+    }
+
+/* Buttons */
+
+    .sign_in {
+        background-color: var(--MainColor-color);
+        font-size: 18px;
+    }
+
+    .button {
+        color: var(--WhiteColor-color);
+        text-decoration: none;
+        height: 3rem;
+        align-items: center;
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        border-radius: 40px;
+        transition: 400ms;
+    }
+
+/* Main & secondary button hover effect */
+
+    .sign_in:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+    .google:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+    .facebook:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+    .apple:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+/* Divider */
+
+    .or {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        width: 400px;
+        margin: 10px 0px;
+        cursor: default;
+        font-size: 18px;
+        color: rgb(99, 99, 99);
+    }
+
+    .or::before, .or::after {
+        content: '';
+        background-color: rgba(165, 160, 150, 0.6);
+        height: 3px;
+        display: block;
+        border-radius: 15px;
+        padding: 0px 85px;
+    }
+
+/* Secondary buttons */
+
+    .google {
+        background-color: #4285F4;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .facebook {
+        background-color: #4267B2;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .apple {
+        background-color: rgb(15, 15, 15);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+/* Secondary button Logos */
+
+    .fa-google {
+        background-color: var(--WhiteColor-color);
+        border-radius: 100px;
+        padding: 2px;
+        margin-right: 10px;
+    }
+
+    .fa-facebook {
+        margin-right: 10px;
+    }
+
+    .fa-apple {
+        margin-right: 10px;
+    }
+
+    .fa-brands {
+        font-size: 23px;
+        height: 23px;
+    }
+
+/* Help links */
+
+    .website-joiners {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 10px;
+        font-size: 18px;
+        z-index: 5;
+    }
+
+    .joining {
+        display: flex;
+        align-items: center;
+    }
+
+    .forgot-password {
+        text-decoration: none;
+        color: var(--MainColor-color);
+        font-weight: 600;
+        transition: 200ms;
+    }
+
+    .new-here {
+        cursor: default;
+        margin: 0px 10px;
+        color: rgb(99, 99, 99);
+    }
+
+    .join-us {
+        text-decoration: none;
+        color: var(--WhiteColor-color);
+        background-color: var(--MainColor-color);
+        padding: 3px 10px;
+        border-radius: 15px;
+        transition: 200ms;
+        text-align: center;
+    }
+
+/* Small sign in button after clicking join us */
+
+    .sign-in-2 {
+        text-decoration: none;
+        color: var(--WhiteColor-color);
+        background-color: var(--MainColor-color);
+        padding: 3px 10px;
+        border-radius: 15px;
+        transition: 200ms;
+        text-align: center;
+        display: none;
+    }
+
+/* Help link hover effect */
+
+    .forgot-password:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+    .join-us:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+    .sign-in-2:hover {
+        transform: var(--HoverScale-Scale);
+    }
+
+@media only screen and (max-width: 600px) {
+
+    /* Header */
+
+        .logo-wrapper {
+            margin-bottom: 40px;
+            box-shadow: 0px 2px 15px rgba(109, 108, 106, 0.4);
+        }
+
+    /* Sign in Window */
+
+        .wrapper {
+            width: 20rem;
+            height: 37.5rem;
+            padding: 1em;
+            gap: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+    /* Eye symbol */
+
+        .fa-solid {
+            margin-left: 200px;
+        }
+
+    /* Divader */
+
+        .or::before, .or::after {
+            padding: 0px 40px;
+        }
+
+        .or {
+            width: 250px;
+            padding: 0px 0px;
+        }
+
+    /* Help links */
+
+        .website-joiners {
+            width: 100%;
+            gap: 10px;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .forgot-password {
+            width: 30%;
+        }
+
+        .new-here {
+            display: none;
+        }
+
+        .join-us {
+            color: var(--WhiteColor-color);
+            background-color: var(--MainColor-color);
+            font-weight: 600;
+        }
+
+        .sign-in-2 {
+            font-weight: 600;
+        }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    /* Header */
+
+        .logo-wrapper {
+            margin-bottom: 30px;
+        }
+
+    /* Sign in Window */
+
+        .wrapper {
+            width: 15rem;
+        }
+
+    /* Eye symbol */
+
+        .fa-solid {
+            margin-left: 150px;
+        }
+
+    /* Divader */
+
+        .or::before, .or::after {
+            padding: 0px 40px;
+        }
+
+        .or {
+            width: 200px;
+            padding: 0px 0px;
+        }
+
+    /* Button logos */
+
+        .fa-brands {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+
+        .fa-apple {
+            margin-right: 5px;
+        }
+
+    /* Help links */
+
+        .website-joiners {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    /* Help links */
+
+        .website-joiners {
+            gap: 30px;
+        }
+
+}

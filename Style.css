@@ -1,0 +1,788 @@
+/* Imports */
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+
+/* Scroll 'Y' */
+
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(161, 172, 159); 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(35, 207, 93); 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(21, 121, 54); 
+    }
+
+
+/* Root */
+
+    :root {
+        --MainColor-color: rgb(35, 207, 93);
+        --BackgroundColor-color: rgb(255, 244, 230);
+        --HeaderColor-color: rgb(255, 237, 212);
+        --MenuBackgroundColor-color: rgba(233, 222, 207, 0.925);
+        --GrayColor-color: rgb(145, 145, 145);
+        --WhiteColor-color: rgb(255, 255, 255);
+        --HoverScale-Scale: scale(1.1);
+    }
+
+/* "*" */
+
+    * {
+        box-sizing: border-box;
+        font-family: Inter;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: var(--BackgroundColor-color);
+        height: 300vh;
+    }
+
+/* Navigation Bar */
+
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    header {
+        align-items: center;
+        background-color: var(--HeaderColor-color);
+        height: auto;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        animation: Nav-bar-load 400ms ease-in-out;
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+    }
+
+/* Navigation Bar - Buttons */
+
+    .navbar li a {
+        color: var(--MainColor-color);
+        text-decoration: none;
+        position: relative;
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0px 10px;
+        transition: 0.35s;
+    }
+
+    .navbar li a:hover {
+        text-decoration: none;
+        background-color: var(--WhiteColor-color);
+        border-radius: 100px;
+        box-shadow: 0 6px 5px -2px rgba(185, 185, 185, 0.5);
+    }
+
+    .navbar-links .button {
+        padding: 10px 25px;
+        background-color: var(--MainColor-color);
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        color: var(--WhiteColor-color);
+        border: none;
+        font-size: 16px;
+        transition: 0.35s;
+        margin: 0px 10px;
+    }
+
+    .navbar-links .button:hover {
+        box-shadow: 0 6px 5px -2px rgba(185, 185, 185, 0.5);
+        color: var(--MainColor-color);
+        background-color: var(--WhiteColor-color);
+    }
+
+/* Navigation Bar - Logo/Logo-Text */
+
+    .Logo {
+        height: 100px;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    .Logo_text a {
+        text-decoration: none;
+        font-size: 30px;
+        font-family: Petit Formal Script;
+        color: var(--MainColor-color);
+        transition: all 0.3s ease 0s;
+    }
+
+    .Logo_text a:hover {
+        color: var(--WhiteColor-color);
+        text-shadow: 1px 1px 5px #969696;
+    }
+
+    .Logos {
+        display: flex;
+        align-items: center;
+    }
+
+/* Navigation Bar - Menu Button */
+
+    .toggle-button {
+        right: 2rem;
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: var(--MainColor-color);
+        border-radius: 10px;
+    }
+
+    .toggle-button:hover {
+        transform: var(--HoverScale-Scale);
+        border-radius: 2px;
+    }
+
+/* Home Screen */
+
+    .home-screen {
+        background-image: url("Banner-Image.png");
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        height: 820px;
+        background-repeat: no-repeat;
+        top: 100px;
+        animation: home-screen-load 600ms ease-out 00ms;
+    }
+
+    .order-button {
+        position: absolute;
+        background-color: var(--MainColor-color);
+        color: var(--WhiteColor-color);
+        height: 50px;
+        width: 200px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        inset: 0;
+        margin: auto;
+        display: flex;
+        text-decoration: none;
+        transition: 0.35s;
+        font-size: 20px;
+        border: none;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+
+    .order-button:hover {
+        color: var(--MainColor-color);
+        background-color: var(--WhiteColor-color);
+        transform: translateY(3px) scale(1.15);
+    }
+
+    .home-screen p {
+        color: var(--WhiteColor-color);
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding-top: 250px;
+        cursor: default;
+    }
+
+/* Coffee Cups Header */
+
+    .menu_header {
+        position: relative;
+        justify-content: center;
+        max-width: 80%;
+        text-align: center;
+        margin-bottom: -100px;
+    }
+
+    .menu_header > h2 {
+        color: var(--MainColor-color);
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .menu_header > h4 {
+        font-size: 25px;
+        margin: 0;
+        margin-top: 20px;
+        color: var(--GrayColor-color);
+    }
+
+/* Coffee Cups */
+
+    .card-section {
+        position: relative;
+        max-width: auto;
+        margin: 0 auto;
+        padding-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: card-section-load 1s;
+    }
+
+    .cards > .card {
+        width: 300px;
+        height: 450px;
+        background-color: var(--MenuBackgroundColor-color);
+        border-radius: 10px;
+        margin: 0px;
+        position: relative;
+    }
+
+    .card {
+        transition: all 0.3s ease 0s;
+    }
+
+    .cards {
+        margin-top: 225px;
+        gap: 5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card_name {
+        font-size: 30px;
+        margin: 10px 0px;
+        cursor: default;
+        color: rgb(30, 30, 30);
+        margin-left: 10px;
+    }
+
+    .card_more a {
+        text-decoration: none;
+        cursor: pointer;
+        background-color: var(--MainColor-color);
+        border-radius: 15px;
+        padding: 5px 25px;
+        color: var(--WhiteColor-color);
+        font-size: 18px;
+        transition: all 0.3s ease 0s;
+        margin-left: 10px;
+    }
+
+    .card_more a:hover {
+        box-shadow: 0 6px 5px -2px rgba(185, 185, 185, 0.5);
+        color: var(--MainColor-color);
+        background-color: var(--WhiteColor-color);
+    }
+
+    .card_top > img {
+        max-height: 400px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+
+    .card > .card_bottom {
+        display: block;
+        border-radius: 10px;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        bottom: 0px;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.2) 100%);
+    }
+
+    .card:hover {
+        transform: translateY(0px) scale(1.05);
+    }
+
+    .see-more a {
+        text-decoration: none;
+        color: var(--MainColor-color);
+        background-color: var(--WhiteColor-color);
+        padding: 10px 50px;
+        border-radius: 50px;
+        transition: 300ms;
+    }
+
+    .see-more {
+        margin: 5rem auto;
+        transition: 300ms;
+    }
+
+    .see-more:hover {
+        transform: scale(1.1);
+    }
+
+    .see-more a:hover{
+        box-shadow: 0px 5px 5px rgba(143, 125, 111, 0.4);
+    }
+
+
+/* Coffee bean information section */
+
+    .coffee-bean-info {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        align-items: center;
+        background-color: var(--MainColor-color);
+        cursor: default;
+        padding: 2rem 0;
+    }
+
+    .coffee-bean-img {
+        height: 300px;
+        margin: 20px;
+    }
+
+    .coffee-bean-text {
+        text-align: center;
+        font-size: 25px;
+        color: var(--WhiteColor-color);
+    } 
+    
+    .coffee-bean-h2 {
+        font-size: 50px;
+        color: var(--WhiteColor-color);
+        margin: 0;
+        /* text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; */
+    }
+
+    .coffee-bean-text-wrapper {
+        display: block;
+        text-align: center;
+        width: 50%;
+    }
+
+/* Media Tags */
+
+    /* Max-Width - 940px */
+
+        @media only screen and (max-width: 940px) {
+
+            /* Navigation Bar */
+
+                .navbar {
+                    justify-content: space-between;
+                    padding: 0px 10px;
+                    padding-right: 50px;
+                }
+
+            /* Navigation Bar - Buttons */
+
+                .navbar li {
+                    flex-direction: column;
+                }
+
+                .navbar li a {
+                    color: var(--WhiteColor-color);
+                }
+
+                .navbar li a:hover {
+                    color: var(--MainColor-color);
+                }
+
+                .navbar-links {
+                    display: block;
+                    position: absolute;
+                    background-color: var(--MenuBackgroundColor-color);
+                    right: 2rem;
+                    top: 6.5rem;
+                    height: auto;
+                    border-radius: 10px;
+                    transform: translateX(200%);
+                    transition: all 0.3s ease-in-out 0s;
+                }
+
+                .navbar-links.active{
+                    transform: translateX(0%);
+                }
+
+                .navbar-links li {
+                    padding: 10px 30px;
+                    text-align: center;
+                    margin: 10px 0px;
+                }
+
+            /* Navigation Bar - Logo/Logo-Text */
+
+                .Logo {
+                    height: 70px;
+                }
+
+            /* Navigation Bar - Menu Button */
+
+                .toggle-button {
+                    display: flex;
+                }
+
+            /* Home Screen */
+
+                .home-screen {
+                    top: 75px;
+                    height: 300px;
+                }
+
+                .home-screen p {
+                    padding-top: 90px;
+                    font-size: 40px;
+                }
+
+                .order-button {
+                    height: 40px;
+                    width: 140px;
+                    font-size: 17px;
+                    letter-spacing: 1px;
+                    top: 75px;
+                }
+
+            /* Coffee Cups Header */
+
+                .menu_header > h2 {
+                    font-size: 50px;
+                }
+
+                .menu_header > h4 {
+                    font-size: 30px;
+                }
+
+            /* Coffee Cups */
+
+                .cards > .card {
+                    width: 300px;
+                    height: 450px;
+                }
+
+                .card_top > img {
+                    height: 350px;
+                }
+
+                .cards {
+                    gap: 50px;
+                }
+
+                .see-more {
+                    margin: 3rem auto;
+                }
+
+            /* Coffee bean information section */
+
+                .coffee-bean-info {
+                    display: flex;
+                    text-align: center;
+                    flex-direction: column-reverse;
+                }
+            
+                .coffee-bean-img {
+                    height: 250px;
+                    margin: 0px;
+                }
+            
+                .coffee-bean-text {
+                    text-align: center;
+                    font-size: 22px;
+                } 
+            
+                .coffee-bean-text-wrapper {
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 80%;
+                }
+
+        }
+
+    /* Max-Width - 600px */
+
+        @media only screen and (max-width: 600px) {
+
+            /* Navigation Bar */
+
+                .navbar {
+                    justify-content: space-between;
+                    padding: 0px 10px;
+                    padding-right: 50px;
+                    height: 50px;
+                }
+
+            /* Navigation Bar - Logo/Logo-Text */
+
+                .Logo {
+                    height: 60px;
+                }
+            
+            /* Navigation Bar - Menu Button */
+            
+                .toggle-button {
+                    height: 20px;
+                    width: 30px;
+                }
+
+            /* Home Screen */
+
+                .home-screen {
+                    top: 50px;
+                    height: 300px;
+                }
+
+                .home-screen p {
+                    padding-top: 100px;
+                    font-size: 35px;
+                }
+
+                .order-button {
+                    height: 30px;
+                    width: 100px;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    top: 50px;
+                }
+
+            /* Coffee Cups Header */
+
+                .menu_header {
+                    margin-bottom: -160px;
+                } 
+
+                .menu_header > h2 {
+                    font-size: 40px;
+                }
+
+                .menu_header > h4 {
+                    font-size: 20px;
+                }
+
+            /* Coffee Cups */
+
+                .card-section {
+                    padding-top: 100px;
+                }
+
+                .cards > .card {
+                    width: 300px;
+                    height: 350px;
+                }
+
+                .card_top > img {
+                    height: 250px;
+                }
+
+            /* Coffee bean information section */
+            
+            .coffee-bean-h2 {
+                font-size: 40px;
+            }
+
+            .coffee-bean-text {
+                font-size: 20px;
+            }
+            
+            .coffee-bean-img {
+                height: 250px;
+                margin: 0px;
+            }
+
+        }
+
+    /* Max-Width - 400px */
+
+        @media only screen and (max-width: 400px) {
+
+            /* Navigation Bar */
+
+                .navbar {
+                    justify-content: space-between;
+                    padding: 0px 10px;
+                    padding-right: 50px;
+                    height: 30px;
+                }
+
+            /* Navigation Bar - Logo/Logo-Text */
+
+                .Logo {
+                    height: 40px;
+                    padding-top: 3px;
+                }
+
+                .Logo_text {
+                    display: none;
+                }
+
+            /* Navigation Bar - Menu Button */
+
+                .toggle-button {
+                    height: 15px;
+                    width: 20px;
+                }
+
+            /* Home Screen */
+
+                .home-screen {
+                    top: 25px;
+                    height: 200px;
+                }
+
+                .home-screen p {
+                    padding-top: 65px;
+                    font-size: 25px;
+                }
+
+                .order-button {
+                    height: 25px;
+                    width: 80px;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    top: 50px;
+                }
+
+            /* Coffee Cups Header */
+
+                .menu_header {
+                    margin-bottom: -200px;
+                } 
+                
+                .menu_header > h2 {
+                    font-size: 25px;
+                }
+
+                .menu_header > h4 {
+                    font-size: 15px;
+                }
+
+            /* Coffee Cups */
+
+                .card-section {
+                    padding-top: 50px;
+                }
+
+                .cards > .card {
+                    width: 250px;
+                    height: 325px;
+                }
+
+            /* Coffee bean information section */
+            
+            .coffee-bean-h2 {
+                font-size: 25px;
+            }
+
+            .coffee-bean-text {
+                font-size: 15px;
+            } 
+
+            .coffee-bean-img {
+                height: 150px;
+                margin: 0px;
+            }
+
+        }
+
+    /* Max-Width - 260px */
+
+        @media only screen and (max-width: 260px) {
+
+            /* Coffee Cups */
+
+                .cards > .card {
+                    width: 175px;
+                    height: 350px;
+                }
+
+            /* Coffee bean information section */
+            
+            .coffee-bean-h2 {
+                font-size: 25px;
+            }
+
+            .coffee-bean-text {
+                font-size: 15px;
+            } 
+
+            .coffee-bean-img {
+                height: 150px;
+                margin: 0px;
+            }
+
+        }
+
+/* Animatons */
+
+    /* Header animation - {Typeof.header} */
+
+        @keyframes Nav-bar-load {
+
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+
+        }
+
+    /* Home screen load animation - {Class.home-screen} */
+
+        @keyframes home-screen-load {
+
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+            } 
+
+        }
+
+    /* Card section load animaton - {Class.card-section} */
+
+        @keyframes card-section-load {
+
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            } 
+
+        }
