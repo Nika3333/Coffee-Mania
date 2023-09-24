@@ -170,7 +170,7 @@
 /* Home Screen */
 
     .home-screen {
-        background-image: url("Banner-Image.png");
+        background-image: url("/Src/Images/Banner-Image.png");
         position: relative;
         background-size: cover;
         background-position: center center;
@@ -294,12 +294,6 @@
         margin-left: 10px;
     }
 
-    .card_more a:hover {
-        box-shadow: 0 6px 5px -2px rgba(185, 185, 185, 0.5);
-        color: var(--MainColor-color);
-        background-color: var(--WhiteColor-color);
-    }
-
     .card_top > img {
         max-height: 400px;
         position: absolute;
@@ -320,17 +314,36 @@
         background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.2) 100%);
     }
 
+    .card_more a:hover {
+        box-shadow: 0 6px 5px -2px rgba(185, 185, 185, 0.5);
+        color: var(--MainColor-color);
+        background-color: var(--WhiteColor-color);
+    }
+
     .card:hover {
         transform: translateY(0px) scale(1.05);
     }
 
-    .see-more a {
+/* More cards section */
+
+    .more-cards {
+        gap: 5em;
+    }
+
+    .more-cards > .cards {
+        margin: 5rem 0 0 0;
+    }
+
+/* See more button */
+
+    .see-more  {
         text-decoration: none;
         color: var(--MainColor-color);
         background-color: var(--WhiteColor-color);
         padding: 10px 50px;
         border-radius: 50px;
         transition: 300ms;
+        cursor: pointer;
     }
 
     .see-more {
@@ -342,10 +355,19 @@
         transform: scale(1.1);
     }
 
-    .see-more a:hover{
+    .see-more:hover{
         box-shadow: 0px 5px 5px rgba(143, 125, 111, 0.4);
     }
 
+/* See more animation */
+
+    .wrapper-cards {
+        display: none;
+    }
+
+    .wrapper-cards.active {
+        display: block;
+    }
 
 /* Coffee bean information section */
 
@@ -603,18 +625,18 @@
 
             /* Coffee bean information section */
             
-            .coffee-bean-h2 {
-                font-size: 40px;
-            }
+                .coffee-bean-h2 {
+                    font-size: 40px;
+                }
 
-            .coffee-bean-text {
-                font-size: 20px;
-            }
-            
-            .coffee-bean-img {
-                height: 250px;
-                margin: 0px;
-            }
+                .coffee-bean-text {
+                    font-size: 20px;
+                }
+                
+                .coffee-bean-img {
+                    height: 250px;
+                    margin: 0px;
+                }
 
         }
 
@@ -694,20 +716,24 @@
                     height: 325px;
                 }
 
+                .more-cards > .cards {
+                    margin: 3em 0 0 0;
+                }
+
             /* Coffee bean information section */
             
-            .coffee-bean-h2 {
-                font-size: 25px;
-            }
+                .coffee-bean-h2 {
+                    font-size: 25px;
+                }
 
-            .coffee-bean-text {
-                font-size: 15px;
-            } 
+                .coffee-bean-text {
+                    font-size: 15px;
+                } 
 
-            .coffee-bean-img {
-                height: 150px;
-                margin: 0px;
-            }
+                .coffee-bean-img {
+                    height: 150px;
+                    margin: 0px;
+                }
 
         }
 
