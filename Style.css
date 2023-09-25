@@ -170,7 +170,7 @@
 /* Home Screen */
 
     .home-screen {
-        background-image: url("/Src/Images/Banner-Image.png");
+        background-image: url("Banner-Image.png");
         position: relative;
         background-size: cover;
         background-position: center center;
