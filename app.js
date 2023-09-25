@@ -10,11 +10,12 @@
 
 // See more
 
-  const wrapperCards = document.querySelector('.wrapper-cards')
-  const seeMore = document.querySelector('.see-more')
+  const wrapperCards = document.getElementsByClassName('wrapper-cards')[0]
+  const seeMore = document.getElementsByClassName('see-more')[0]
+ 
 
   seeMore.addEventListener('click', () =>  {
-    wrapperCards.classList.toggle('active')
+  wrapperCards.classList.toggle('active')
 
     // See more text changer
     
