@@ -10,6 +10,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="Style.css">
     
+    <!-- Javascript  -->
+    <script src="app.js" defer></script>
+    
 </head>
 <body>
 
@@ -19,15 +22,15 @@
                 <ul class="navbar">
 
                     <div class="Logos">
-                        <a href="#" ><img src="Logo.png" alt="Logo" class="Logo"></a>
+                        <a href="#" ><img src="Logo.png" alt="Logo" class="Logo" title="Logo"></a>
                         <h3 class="Logo_text"><a href="#">Coffee Mania</a></h3>
                     </div>
 
                     <div class="navbar-links">
-                        <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="#"><i class="fa-solid fa-mug-hot"></i> Menu</a></li>
-                        <li><a href="#"><i class="fa-solid fa-scroll"></i> About</a></li>
-                        <li><a href="#"><i class="fa-solid fa-globe"></i> Contacts</a></li>
+                        <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="#menu"><i class="fa-solid fa-mug-hot"></i> Menu</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-scroll"></i> About</a></li>
+                        <li><a href="#contacts"><i class="fa-solid fa-globe"></i> Contacts</a></li>
                         <li><a href="Sign_in.html" class="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</a></li>
                     </div>
                 
@@ -43,15 +46,17 @@
 
         <!-- Home banner -->
 
-        <div class="home-screen">
-            <p>The Best Coffee</p>
-            <a href="#"><button class="order-button">Order</button></a>
+        <div id="home">
+            <div class="home-screen">
+                <p>The Best Coffee</p>
+                <a href="#"><button class="order-button">Order</button></a>
+            </div>
         </div>
  
 
         <!-- Coffee card section  -->
 
-        <section class="card-section">
+        <section class="card-section" id="menu">
 
             <!-- Coffee card header text -->
 
@@ -63,7 +68,7 @@
             <!-- Coffee cards -->
 
             <div class="cards">
-                    <div class="card">
+                    <div class="card" title="Americano">
                         <div class="card_top"><img src="Americano.png" alt="Americano"></div>
                         <div class="card_bottom">
                             <div class="card_name">Americano</div>
@@ -71,7 +76,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" title="Espresso">
                         <div class="card_top"><img src="Espresso.png" alt="Espresso"></div>
                         <div class="card_bottom">
                             <div class="card_name">Espresso</div>
@@ -79,7 +84,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" title="Latte">
                         <div class="card_top"><img src="Latte.png" alt="Latte"></div>
                         <div class="card_bottom">
                             <div class="card_name">Latte</div>
@@ -87,7 +92,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" title="Cappuccino">
                         <div class="card_top"><img src="Cappuccino.png" alt="Cappuccino"></div>
                         <div class="card_bottom">
                             <div class="card_name">Cappuccino</div>
@@ -96,62 +101,82 @@
                     </div>
             </div>
 
-                <div class="wrapper-cards">
-                    <div class="more-cards">
-                        <div class="cards">
-                            <div class="card">
-                                <div class="card_top"><img src="Black.png" alt="Black"></div>
-                                <div class="card_bottom">
-                                    <div class="card_name">Black</div>
-                                    <div class="card_more"><a href="#">More</a></div>
-                                </div>
+            <!-- Hidden section -->
+
+            <div class="wrapper-cards">
+                <div class="more-cards">
+                    <div class="cards">
+                        <div class="card" title="Black">
+                            <div class="card_top"><img src="Black.png" alt="Black"></div>
+                            <div class="card_bottom">
+                                <div class="card_name">Black</div>
+                                <div class="card_more"><a href="#">More</a></div>
                             </div>
-                            <div class="card">
-                                <div class="card_top"><img src="Mocaccino.png" alt="Mocaccino"></div>
-                                <div class="card_bottom">
-                                    <div class="card_name">Mocaccino</div>
-                                    <div class="card_more"><a href="#">More</a></div>
-                                </div>
+                        </div>
+                        <div class="card" title="Mocaccino">
+                            <div class="card_top"><img src="Mocaccino.png" alt="Mocaccino"></div>
+                            <div class="card_bottom">
+                                <div class="card_name">Mocaccino</div>
+                                <div class="card_more"><a href="#">More</a></div>
                             </div>
-                            <div class="card">
-                                <div class="card_top"><img src="Mocha.png" alt="Mocha"></div>
-                                <div class="card_bottom">
-                                    <div class="card_name">Mocha</div>
-                                    <div class="card_more"><a href="#">More</a></div>
-                                </div>
+                        </div>
+                        <div class="card" title="Mocha">
+                            <div class="card_top"><img src="Mocha.png" alt="Mocha"></div>
+                            <div class="card_bottom">
+                                <div class="card_name">Mocha</div>
+                                <div class="card_more"><a href="#">More</a></div>
                             </div>
-                            <div class="card">
-                                <div class="card_top"><img src="Doppio.png" alt="Doppio"></div>
-                                <div class="card_bottom">
-                                    <div class="card_name">Doppio</div>
-                                    <div class="card_more"><a href="#">More</a></div>
-                                </div>
+                        </div>
+                        <div class="card" title="Doppio">
+                            <div class="card_top"><img src="Doppio.png" alt="Doppio"></div>
+                            <div class="card_bottom">
+                                <div class="card_name">Doppio</div>
+                                <div class="card_more"><a href="#">More</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <!-- See more button -->
 
             <div class="see-more-buttons">
                 <div class="see-more">See More</div>
                 <div class="more"><a href="#">More</a></div>
             </div>
-
-
         </section>
 
-        <div class="coffee-bean-info">
+        <!-- Info section -->
+
+        <div class="coffee-bean-info" id="about">
             <img src="Coffee Bean.png" alt="Coffee Bean" class="coffee-bean-img">
             <div class="coffee-bean-text-wrapper">
                 <h2 class="coffee-bean-h2">Facts about Coffee</h2>
                 <p class="coffee-bean-text">Coffee beans, sourced from the Coffea plant, offer both intrigue and utility. Their varieties, Arabica and Robusta, showcase diverse flavors. These beans, harvested by hand, contribute to a beloved beverage filled with antioxidants, enhancing alertness, and forging social connections, making coffee a versatile and cherished commodity.</p>
             </div>
+        </div> 
+
+        <!-- Video section -->
+
+        <div class="video-wrapper">
+            <div class="video-text-wrapper">
+                <h2>Crafted with Passion</h2>
+                <p>Experience the meticulous craft behind our exceptional coffee. From selecting premium beans to expert roasting in our state-of-the-art facilities, each step is executed with precision. Dive into the journey showcasing dedication and passion for a rich, delightful coffee experience. Join us in delivering excellence to our discerning customers.</p>
+            </div>
+            <video src="Final Video.mp4" controls></video>
         </div>
 
+        <!-- Footer -->
 
-    <!-- Javascript  -->
-
-    <script src="app.js"></script>
+        <div class="footer" id="contacts">
+            <ul>
+                <li><i class="fa-brands fa-square-facebook"></i><a href="#"> Facebook</a></li>
+                <li><i class="fa-brands fa-instagram"></i></i><a href="#"> Instagram</a></li>
+                <li><i class="fa-brands fa-twitter"></i><a href="#"> Twitter</a></li>
+                <li><i class="fa-brands fa-linkedin"></i><a href="#"> LinkedIn</a></li>
+                <li><i class="fa-brands fa-tiktok"></i><a href="#"> Tiktok</a></li>
+            </ul>
+        </div>
 
 </body>
 </html>
