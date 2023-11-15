@@ -1,4 +1,4 @@
-// Variables
+// Consts
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const wrapperCards = document.getElementsByClassName('wrapper-cards')[0]
